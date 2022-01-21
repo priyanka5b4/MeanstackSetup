@@ -1,0 +1,75 @@
+@use '@angular/material' as mat;
+.minimal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em;
+  max-height: 64px;
+  max-width: 64px;
+  gap: 4px;
+  ::ng-deep {
+    .image-wrapper {
+      height: 32px;
+      width: 32px;
+      img {
+        height: 32px;
+        width: 32px;
+      }
+    }
+    .title-wrapper {
+      font-size: smaller;
+      max-width: 48px;
+      text-align: center;
+      line-height: calc(1em + 2px);
+    }
+  }
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  padding: 0.5em;
+  gap: 8px;
+  ::ng-deep {
+    .image-wrapper {
+      height: 48px;
+      width: 48px;
+      img {
+        height: 48px;
+        width: 48px;
+      }
+    }
+    .title-wrapper {
+      font-size: 1.6em;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 228px;
+  width: 172px;
+  border-radius: 12px;
+  @include mat.elevation(2);
+  ::ng-deep {
+    .image-wrapper {
+      flex-basis: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        height: 64px;
+        width: 64px;
+      }
+    }
+    .title-wrapper {
+      margin-top: -0.4em;
+      font-size: 1.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
